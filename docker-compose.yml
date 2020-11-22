@@ -1,0 +1,14 @@
+version: '2.1'
+
+networks:
+  overlay:
+
+services:
+  resume-app:
+    build: .
+    networks:
+      - overlay
+    volumes:
+      - .:/opt/app/
+    ports:
+      - 5000:80
