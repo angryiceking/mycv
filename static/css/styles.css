@@ -394,6 +394,7 @@ h6, .h6 {
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
+  font-family: 'Roboto', sans-serif;
 }
 
 .display-1 {
@@ -3879,6 +3880,7 @@ input[type=button].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  font-family: 'Roboto', sans-serif;
 }
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
@@ -6075,7 +6077,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #bd5d38 !important;
+  background-color: #2c3e50 !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -9777,7 +9779,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #bd5d38 !important;
+  color: #0084ff !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -10006,6 +10008,7 @@ h1 {
 p.lead {
   font-size: 1.15rem;
   font-weight: 400;
+  font-family: 'Roboto', sans-serif;
 }
 
 .subheading {
