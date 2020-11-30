@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" style="right:0  !important;">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Clarence Taylor</span>
         <span class="d-none d-lg-block">
@@ -20,6 +20,8 @@
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
+
         </ul>
     </div>
 </nav>
@@ -147,15 +149,56 @@
     <section class="resume-section" id="interests">
         <div class="resume-section-content">
             <h2 class="mb-5">Interests</h2>
-            <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid
-                skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking,
-                free climbing, and kayaking.</p>
-            <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television
-                shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest
-                technology advancements in the front-end web development world.</p>
+            <p>Apart from being a software engineer, I enjoy most of my time being outside, hiking with friends, visit a local museum, resto hunting to discover delicious food and write it for future references.</p>
+            <p class="mb-0">When forced indoors, I follow a number of sci-fi, action and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the back-end software engineering world.</p>
         </div>
     </section>
     <hr class="m-0" />
-    <!-- Awards-->
+    <!-- Projects-->
+    <section class="resume-section" id="projects">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Pet Projects</h2>
+            <div class="subheading mb-3">Game Related</div>
+            <div class="row">
+                <div class="col-md-6">
+                    <span>
+                        Isekai Transporter (WIP)</span>
+                        <br/>
+                        <img src="{% static 'assets/img/isekaitransport.png' %}" class="img-fluid" alt="Responsive image">
+                </div>
+                <div class="col-md-6">
+                    <span>
+                        Hero Generator (WIP)</span>
+                        <br/>
+                        <img src="{% static 'assets/img/herogenerator.png' %}" class="img-fluid" alt="Responsive image">
+                </div>
+            </div>
+            <br>
+            <div class="subheading mb-3">Other Projects</div>
+            <div class="row">
+                <div class="col-md-6">
+                    <span>
+                        Project Willow (WIP)</span>
+                        <br/>
+                        <img src="{% static 'assets/img/projectwillow.png' %}" class="img-fluid" alt="Responsive image">
+                </div>
+                <div class="col-md-6">
+                    <span>
+                        Shopping Assistant (WIP)</span>
+                        <br/>
+                        <img src="{% static 'assets/img/shoppingassistant.jpg' %}" class="img-fluid" alt="Responsive image">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <span>
+                        <br/>
+                        Caterpy (WIP)</span>
+                        <br/>
+                        <img src="{% static 'assets/img/isekaitransport.png' %}" class="img-fluid" alt="Responsive image">
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 {% endblock %}
