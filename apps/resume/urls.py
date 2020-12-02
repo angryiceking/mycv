@@ -6,4 +6,5 @@ app_name = 'resume'
 
 urlpatterns = [
     path('', csrf_exempt(ResumeLandingPage.as_view()), name='index'),
+    path('api/receiver', csrf_exempt(Receiver.as_view()), name='receiver'),
 ]
