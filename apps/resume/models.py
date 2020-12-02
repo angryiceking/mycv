@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Subscriber(models.Model):
     subscriber_number = models.CharField(max_length=255, blank=True)
-    subscriber_name = models.CharField(max_length=255, blank=True)
+    access_token = models.CharField(max_length=255, blank=True)
     created_at = models.DateTimeField(auto_now=True, blank=True)
 
 class Log(models.Model):
