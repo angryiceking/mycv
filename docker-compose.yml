@@ -1,14 +1,10 @@
 version: '2.1'
 
-networks:
-  overlay:
-
 services:
   resume-app:
     build: .
-    networks:
-      - overlay
+    command: python manage.py runserver 0.0.0.0:3001
     volumes:
       - .:/opt/app/
     ports:
-      - 5000:80
+      - 3001:3001
