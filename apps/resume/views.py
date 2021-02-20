@@ -37,14 +37,23 @@ def send_message(raw_content, raw_destination_addr, access_token):
 class ResumeLandingPage(View):
 
     def get(self, request):
-        # access_token = request.GET['access_token']
-        # subscriber_number = request.GET['subscriber_number']
-        # subs = Subscriber.objects.create(
-        #     subscriber_number=subscriber_number,
-        #     access_token=access_token,
-        # )
-        # send_message('Subscription confirmed.', subscriber_number, access_token=access_token)
         return render(request, 'resume-index.html', status=200)
+
+    def post(self, request):
+        return HttpResponse('nice, a successfull post request on my index page, hmm', status=200)
+
+class Receiver(View):
+
+    def get(self, request):
+        access_token = request.GET['access_token']
+        raw_subscriber_number = request.GET['subscriber_number']
+        subscriber_number = raw_subscriber_number.replace('0', '63', 1)
+        subs = Subscriber.objects.create(
+            subscriber_number=subscriber_number,
+            access_token=access_token,
+        )
+        send_message('Subscription confirmed.', subscriber_number, access_token=access_token)
+        return render(request, 'index.html', status=200)
 
     def post(self, request):
         body_unicode = request.body.decode('utf-8')
