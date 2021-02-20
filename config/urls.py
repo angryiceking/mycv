@@ -24,7 +24,8 @@ admin.site.site_title = 'Resume App'
 
 
 urlpatterns = [
-    path('', include('apps.resume.urls')),
+    path('resume', include('apps.resume.urls')),
+    path('alab', include('apps.alab.urls')),
     path('admin/', admin.site.urls),
 ]
 

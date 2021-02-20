@@ -37,14 +37,14 @@ def send_message(raw_content, raw_destination_addr, access_token):
 class ResumeLandingPage(View):
 
     def get(self, request):
-        access_token = request.GET['access_token']
-        subscriber_number = request.GET['subscriber_number']
-        subs = Subscriber.objects.create(
-            subscriber_number=subscriber_number,
-            access_token=access_token,
-        )
-        send_message('Subscription confirmed.', subscriber_number, access_token=access_token)
-        return render(request, 'index.html', status=200)
+        # access_token = request.GET['access_token']
+        # subscriber_number = request.GET['subscriber_number']
+        # subs = Subscriber.objects.create(
+        #     subscriber_number=subscriber_number,
+        #     access_token=access_token,
+        # )
+        # send_message('Subscription confirmed.', subscriber_number, access_token=access_token)
+        return render(request, 'resume-index.html', status=200)
 
     def post(self, request):
         return HttpResponse('nice, a successfull post request on my index page, hmm', status=200)
@@ -56,6 +56,7 @@ class Receiver(View):
         body = json.loads(body_unicode)
         raw_content = body['inboundSMSMessageList']['inboundSMSMessage'][0]['message']
         raw_destination_addr = body['inboundSMSMessageList']['inboundSMSMessage'][0]['senderAddress']
+        
         if any(raw_content in rs for rs in [reserved_words, keywords]):
             print('message is a reserved word or a keyword')
             pass

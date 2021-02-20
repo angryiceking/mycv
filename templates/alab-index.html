@@ -1,0 +1,28 @@
+{% extends 'alab/base.html' %}
+{% load static %}
+{% block content %}
+<div class="main" style="background-image: url('{% static 'images/default.jpg' %}')">
+
+    <!--    Change the image source '/images/default.jpg' with your favourite image.     -->
+
+    <div class="cover black" data-color="black"></div>
+
+    <!--   You can change the black color for the filter with those colors: blue, green, red, orange       -->
+
+    <div class="container">
+        <!--  H1 can have 2 designs: "logo" and "logo cursive"           -->
+
+        <div class="content">
+            <h1 class="logo" style="margin-top: 20%;">
+                ALAB
+            </h1>
+            <!-- <h4 class="motto">Find the best Bootstrap 3 freebies and themes on the web.</h4> -->
+            <div class="subscribe">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+</div>
+</body>
+{% endblock %}
